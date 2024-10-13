@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(../pictures/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.stopwatch{
+    margin: 3rem 3rem 3rem 13rem;
+    height: 26.5rem;
+    width: 30rem;
+    border: 5px solid green;
+    border-radius: 3rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px;
+}
+#title{
+    color: green;
+    padding: 1rem 0 ;
+    background-color: rgb(148, 215, 55);
+    border-radius: 2.7rem 2.7rem 0 0;
+}
+.display{
+    padding: 1rem 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    backdrop-filter: blur(10px);
+  
+}
+.border{
+    background: repeating-linear-gradient(to bottom right, #ff8000 ,  #ffb24d, #f1fb30 , #81fb30 , #1ac420) ;
+    height: 15rem;
+    width: 15rem;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 7px;
+}
+.borderMoving{
+    animation: borderRotate 1s infinite linear;
+}
+.time{
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    height: 14.2rem;
+    width: 14.2rem;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(148, 215, 55);
+    height: 5.2rem;
+}
+button{
+    font-weight: 600;
+    background-color: rgb(23, 201, 23);
+    padding: .5rem;
+    font-size: larger;
+    width: 6rem;
+    border-radius: 1rem;
+}
+button:hover{
+    opacity: 0.8;
+}
+button:disabled{
+    cursor: not-allowed;
+}
+
+.lapsDiv{
+    width: 30%;
+    min-height:5rem;
+    max-height: max-content;
+    backdrop-filter: blur(10px);
+    border: 5px solid green;
+    border-radius: 3rem;
+    padding: 2rem;
+
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#lapTitle{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+li{
+    list-style-type:none;
+    font-size: x-large;
+}
+
+@keyframes borderRotate{
+    0% {rotate: 0deg;}
+    50% {rotate: 180deg;}
+    100% {rotate: 360deg;}
+}
